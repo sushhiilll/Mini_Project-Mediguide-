@@ -1,0 +1,96 @@
+.google-auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9999;
+}
+
+.google-auth-card {
+    background: white;
+    width: 450px;
+    border-radius: 8px;
+    padding: 40px;
+    border: 1px solid #dadce0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.google-logo {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.g-blue { color: #4285F4; }
+.g-red { color: #EA4335; }
+.g-yellow { color: #FBBC05; }
+.g-green { color: #34A853; }
+
+.google-auth-card h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #202124;
+    margin-top: 0;
+}
+
+.google-auth-card p {
+    font-size: 16px;
+    color: #202124;
+    margin-bottom: 32px;
+}
+
+.account-list {
+    text-align: left;
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    margin-bottom: 32px;
+}
+
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.account-item:hover {
+    background-color: #f8f9fa;
+}
+
+.account-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c4043;
+}
+
+.account-email {
+    font-size: 12px;
+    color: #5f6368;
+}
+
+.google-footer {
+    font-size: 12px;
+    color: #5f6368;
+    line-height: 1.5;
+}

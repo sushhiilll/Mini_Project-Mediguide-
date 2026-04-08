@@ -1,0 +1,335 @@
+.care-map-container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    min-height: calc(100vh - 80px);
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.care-map-header {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sos-btn {
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: #DC2626;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: var(--radius-full);
+    border: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+    transition: all 0.2s;
+}
+.sos-btn:hover {
+    transform: scale(1.05);
+}
+.sos-btn.active {
+    background: #991b1b;
+}
+
+/* Panic Mode DOM Overrides */
+body.emergency-panic-mode {
+    --bg-color: #000000;
+    --text-color: #FFFFFF;
+    --text-dark: #FFFFFF;
+    --white: #111111;
+    --border-color: #333333;
+    --primary-blue: #EF4444; /* Force red for primary operations */
+}
+
+/* Forcing larger buttons in panic mode */
+body.emergency-panic-mode .triage-btn {
+    min-height: 56px;
+    font-size: 1.1rem;
+}
+
+body.emergency-panic-mode .glass-panel {
+    background: rgba(20, 20, 20, 0.9);
+    border-color: #EF4444;
+}
+
+/* AI Search Bar */
+.ai-search-bar {
+    max-width: 600px;
+    margin: 0 auto 16px auto;
+    padding: 8px;
+    border-radius: var(--radius-full);
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: var(--radius-full);
+    padding: 4px 4px 4px 20px;
+}
+
+.treatment-input {
+    flex: 1;
+    border: none;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--text-color);
+    outline: none;
+}
+
+.ai-submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--primary-blue), #8b5cf6);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Toggles & Filters */
+.specialty-toggles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding: 12px;
+    border-radius: var(--radius-lg);
+    border: none;
+}
+.toggle-group {
+    display: flex;
+    gap: 24px;
+}
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.toggle-label input {
+    display: none;
+}
+.slider {
+    width: 44px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    position: relative;
+    transition: 0.3s;
+}
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+.toggle-label input:checked + .slider {
+    background-color: #10B981;
+}
+.toggle-label input:checked + .slider.slider-blue {
+    background-color: var(--primary-blue);
+}
+.toggle-label input:checked + .slider::before {
+    transform: translateX(20px);
+}
+.label-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.triage-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: var(--radius-lg);
+}
+
+.triage-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: var(--white);
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.triage-btn.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: white;
+}
+
+.critical-filter.active.alert {
+    background: #DC2626;
+    border-color: #DC2626;
+    animation: flashCritical 1.5s infinite alternate;
+}
+
+@keyframes flashCritical {
+    from { box-shadow: 0 0 10px rgba(220, 38, 38, 0.4); }
+    to { box-shadow: 0 0 20px rgba(220, 38, 38, 0.8); }
+}
+
+/* Pulsing Custom Map Markers */
+.map-marker-container {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-marker-core {
+    width: 24px;
+    height: 24px;
+    background: var(--dark-blue);
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    background: inherit;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.pulse-fast {
+    animation: pulse 0.8s infinite;
+}
+.pulse-slow {
+    animation: pulse 2.5s infinite;
+}
+.bg-red-500 { background-color: rgba(239, 68, 68, 0.4); }
+.bg-green-500 { background-color: rgba(16, 185, 129, 0.4); }
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.floating-resource {
+    position: absolute;
+    top: -20px;
+    background: var(--dark-blue);
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* InfoWindow Custom */
+.hosp-name {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: #111; 
+}
+
+.hospital-intel-box {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+.hospital-intel-box p {
+    margin: 4px 0;
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+}
+
+.highlight-tag {
+    font-weight: bold;
+    color: #DC2626;
+}
+
+.intel-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #64748b;
+    padding: 12px;
+}
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+.qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: white;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    color: #111;
+}
+
+.mt-3 { margin-top: 12px; }
+
+/* Wrapper Map */
+.map-wrapper {
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    background: var(--white);
+}
+
+.google-map-container-box {
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+}
+
+.status-legend {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
+}

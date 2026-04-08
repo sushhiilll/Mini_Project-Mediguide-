@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hosp_01",
+    "name": "Apollo Hospitals, Bilaspur",
+    "coordinates": [22.0910, 82.1645],
+    "tags": ["cardiac", "icu", "emergency"],
+    "address": "Raj Kishore Nagar, Bilaspur",
+    "open_now": true
+  },
+  {
+    "id": "hosp_02",
+    "name": "CIMS (Chhattisgarh Institute of Medical Sciences)",
+    "coordinates": [22.0817, 82.1466],
+    "tags": ["general", "trauma", "emergency"],
+    "address": "Civil Lines, Bilaspur",
+    "open_now": true
+  },
+  {
+    "id": "hosp_03",
+    "name": "Shradhha Children's Clinic",
+    "coordinates": [22.1245, 82.1402],
+    "tags": ["pediatric", "childrens_hospital"],
+    "address": "Koni, Bilaspur",
+    "open_now": true
+  },
+  {
+    "id": "pharm_01",
+    "name": "Apollo 24/7 Pharmacy",
+    "coordinates": [22.0915, 82.1650],
+    "tags": ["pharmacy"],
+    "address": "Raj Kishore Nagar, Bilaspur",
+    "open_now": true
+  },
+  {
+    "id": "hosp_04",
+    "name": "Elite Medcity Cardiology",
+    "coordinates": [22.0650, 82.1520],
+    "tags": ["cardiac", "icu"],
+    "address": "Vyapar Vihar, Bilaspur",
+    "open_now": true
+  },
+  {
+    "id": "pharm_02",
+    "name": "Hari Om Medical (Night Rx)",
+    "coordinates": [22.1235, 82.1390],
+    "tags": ["pharmacy"],
+    "address": "Koni, Bilaspur",
+    "open_now": true
+  }
+]

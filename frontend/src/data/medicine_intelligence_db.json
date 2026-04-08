@@ -1,0 +1,99 @@
+[
+  {
+    "name": "IBUPROFEN",
+    "aliases": ["ADVIL", "MOTRIN", "BRUFEN"],
+    "contraindications": [
+      {
+        "condition": "Hypertension",
+        "warning": "CRITICAL: NSAIDs like Ibuprofen can elevate blood pressure and reduce the effectiveness of hypertension medications."
+      }
+    ],
+    "interactions": [],
+    "instructions": {
+      "foodRequirement": "Take with food",
+      "emptyStomachHours": null,
+      "details": "Take with food or milk to prevent stomach bleeding."
+    },
+    "vitalsWarning": "May increase blood pressure."
+  },
+  {
+    "name": "AMOXICILLIN",
+    "aliases": ["AMOXIL", "TRIMOX"],
+    "contraindications": [
+      {
+        "condition": "Penicillin",
+        "warning": "CRITICAL ALLERGY ALERT: You have a documented allergy to Penicillin. Amoxicillin is a Penicillin-class antibiotic."
+      }
+    ],
+    "interactions": [],
+    "instructions": {
+      "foodRequirement": "Can be taken with or without food",
+      "emptyStomachHours": null,
+      "details": "Finish the entire prescription carefully."
+    },
+    "vitalsWarning": null
+  },
+  {
+    "name": "LEVOTHYROXINE",
+    "aliases": ["SYNTHROID", "EUTHYROX"],
+    "contraindications": [],
+    "interactions": [
+      {
+        "medication": "Metformin",
+        "warning": "MODERATE: Levothyroxine may alter blood glucose control. Monitor your diabetes closely."
+      }
+    ],
+    "instructions": {
+      "foodRequirement": "Empty Stomach",
+      "emptyStomachHours": 1,
+      "details": "Administer on an empty stomach, 30-60 minutes before breakfast."
+    },
+    "vitalsWarning": "May elevate heart rate if dosage is incorrect."
+  },
+  {
+    "name": "PSEUDOEPHEDRINE",
+    "aliases": ["SUDAFED"],
+    "contraindications": [
+      {
+        "condition": "Hypertension",
+        "warning": "CRITICAL: Decongestants like Pseudoephedrine constrict blood vessels and can cause a dangerous spike in high blood pressure."
+      }
+    ],
+    "interactions": [],
+    "instructions": {
+      "foodRequirement": "Can be taken with or without food",
+      "emptyStomachHours": null,
+      "details": "Do not take near bedtime as it may cause insomnia."
+    },
+    "vitalsWarning": "WARNING: Known to increase heart rate and blood pressure."
+  },
+  {
+    "name": "PANTOPRAZOLE",
+    "aliases": ["PROTONIX", "PANTOSEC"],
+    "contraindications": [],
+    "interactions": [],
+    "instructions": {
+      "foodRequirement": "Empty Stomach",
+      "emptyStomachHours": 1,
+      "details": "Take 30-60 minutes before a meal, preferably in the morning."
+    },
+    "vitalsWarning": null
+  },
+  {
+    "name": "PARACETAMOL",
+    "aliases": ["PARACIP", "TYLENOL", "CROCIN", "CALPOL", "PANADOL", "TURTIETT-500", "WRACIP-500"],
+    "contraindications": [
+      {
+        "condition": "Liver Disease",
+        "warning": "CRITICAL: High doses of Paracetamol can cause severe liver damage."
+      }
+    ],
+    "interactions": [],
+    "instructions": {
+      "foodRequirement": "Can be taken with or without food",
+      "emptyStomachHours": null,
+      "details": "Do not exceed 4000mg per day to avoid liver toxicity."
+    },
+    "vitalsWarning": null
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "Sarah",
+  "allergies": ["Penicillin", "Sulfa"],
+  "conditions": ["Hypertension", "Diabetes"],
+  "currentMeds": ["Metformin"]
+}

@@ -1,0 +1,32 @@
+{
+  "hosp_01": {
+    "status": "Busy",
+    "minutes": 45,
+    "color": "red"
+  },
+  "hosp_02": {
+    "status": "High Wait",
+    "minutes": 65,
+    "color": "red"
+  },
+  "hosp_03": {
+    "status": "Low Wait",
+    "minutes": 12,
+    "color": "green"
+  },
+  "hosp_04": {
+    "status": "Moderate",
+    "minutes": 25,
+    "color": "orange"
+  },
+  "pharm_01": {
+    "status": "Open",
+    "minutes": 0,
+    "color": "green"
+  },
+  "pharm_02": {
+    "status": "Open",
+    "minutes": 5,
+    "color": "green"
+  }
+}
